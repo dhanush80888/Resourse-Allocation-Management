@@ -1,63 +1,93 @@
 # Resource Management System
 
 ## Overview
-
-The Resource Management System is a command-line application written in Python designed to manage resources and tasks effectively. Users can create, update, delete, and assign resources to tasks, all while monitoring resource utilization.
+The Resource Management System is a command-line application that allows users to manage resources and tasks effectively. Users can create, read, update, and delete resources and tasks, as well as assign resources to specific tasks.
 
 ## Features
+- **Create Resource**: Add new resources with a unique ID, type, and name.
+- **Read Resources**: List all available resources.
+- **Update Resource**: Modify the name of an existing resource.
+- **Delete Resource**: Remove a resource by its ID.
+- **Create Task**: Add new tasks with a unique ID and description.
+- **Read Tasks**: List all existing tasks along with their assigned resources.
+- **Assign Resource to Task**: Link a resource to a specific task.
+- **Monitor Resource Utilization**: Check the utilization of a specific resource.
 
-- **Resource Management**: Create, read, update, and delete resources.
-- **Task Management**: Create and view tasks with associated resources.
-- **Resource Assignment**: Easily assign resources to tasks.
-- **Utilization Monitoring**: Check the status of specific resources.
-- **Interactive Menu**: User-friendly command-line interface for easy navigation.
+## Classes
+### Resource
+Represents a resource with an ID, type, and name.
+- `__init__(resource_id, resource_type, name)`: Initializes a new resource.
+- `__repr__()`: Returns a string representation of the resource.
 
-## Requirements
+### Task
+Represents a task with an ID, description, and assigned resources.
+- `__init__(task_id, description)`: Initializes a new task.
+- `assign_resource(resource)`: Assigns a resource to the task.
+- `__repr__()`: Returns a string representation of the task.
 
+### ResourceManager
+Manages the resources and tasks.
+- `create_resource(resource_id, resource_type, name)`: Adds a new resource.
+- `read_resources()`: Returns a list of all resources.
+- `update_resource(resource_id, name)`: Updates the name of a resource.
+- `delete_resource(resource_id)`: Deletes a resource by its ID.
+- `create_task(task_id, description)`: Adds a new task.
+- `read_tasks()`: Returns a list of all tasks.
+- `assign_resources_to_tasks(task_id, resource_id)`: Assigns a resource to a task.
+- `monitor_resource_utilization(utilization_id)`: Monitors the utilization of a resource.
+
+## Getting Started
+### Prerequisites
 - Python 3.x
 
-## Installation
-
-1. Clone or download the repository to your local machine.
-2. Open your terminal or command prompt.
-3. Navigate to the project directory.
-4. Run the application with the following command:
-
+### Installation
+1. Clone this repository to your local machine:
    ```bash
-   python resource_manager.py
-Usage
-After launching the application, a menu will appear with several options:
+   git clone <repository-url>
+   cd resource_management_system# Resource Management System
 
-Create Resource: Add a new resource by specifying its ID, type, and name.
-Read Resources: Display all existing resources.
-Update Resource: Modify the name of an existing resource using its ID.
-Delete Resource: Remove a resource by providing its ID.
-Create Task: Add a new task with a unique ID and description.
-Read Tasks: View all tasks along with their assigned resources.
-Assign Resource to Task: Assign a specified resource to a task using their IDs.
-Monitor Resource Utilization: Get details about a specific resource using its ID.
-Exit: Terminate the application.
-Example Workflow
-Start the application.
-Use option 1 to create a resource and follow the prompts.
-Select option 2 to view the created resources.
-Create a task using option 5 and then assign a resource with option 7.
-Monitor a resource using option 8.
-Exit the program using option 9.
-Code Structure
-Resource Class: Represents a resource with attributes like ID, type, and name.
-Task Class: Represents a task with attributes such as ID, description, and a list of assigned resources.
-ResourceManager Class: Handles the operations related to resources and tasks.
-Contribution
-Contributions are welcome! If you have suggestions for enhancements or new features, please open an issue or submit a pull request.
+## Overview
+The Resource Management System is a command-line application that allows users to manage resources and tasks effectively. Users can create, read, update, and delete resources and tasks, as well as assign resources to specific tasks.
 
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
+## Features
+- **Create Resource**: Add new resources with a unique ID, type, and name.
+- **Read Resources**: List all available resources.
+- **Update Resource**: Modify the name of an existing resource.
+- **Delete Resource**: Remove a resource by its ID.
+- **Create Task**: Add new tasks with a unique ID and description.
+- **Read Tasks**: List all existing tasks along with their assigned resources.
+- **Assign Resource to Task**: Link a resource to a specific task.
+- **Monitor Resource Utilization**: Check the utilization of a specific resource.
 
-Acknowledgements
-Python Software Foundation for the programming language.
-Community resources that assisted in the development of this application.
-css
-Copy code
+## Classes
+### Resource
+Represents a resource with an ID, type, and name.
+- `__init__(resource_id, resource_type, name)`: Initializes a new resource.
+- `__repr__()`: Returns a string representation of the resource.
 
-Feel free to customize this README further to suit your project needs!
+### Task
+Represents a task with an ID, description, and assigned resources.
+- `__init__(task_id, description)`: Initializes a new task.
+- `assign_resource(resource)`: Assigns a resource to the task.
+- `__repr__()`: Returns a string representation of the task.
+
+### ResourceManager
+Manages the resources and tasks.
+- `create_resource(resource_id, resource_type, name)`: Adds a new resource.
+- `read_resources()`: Returns a list of all resources.
+- `update_resource(resource_id, name)`: Updates the name of a resource.
+- `delete_resource(resource_id)`: Deletes a resource by its ID.
+- `create_task(task_id, description)`: Adds a new task.
+- `read_tasks()`: Returns a list of all tasks.
+- `assign_resources_to_tasks(task_id, resource_id)`: Assigns a resource to a task.
+- `monitor_resource_utilization(utilization_id)`: Monitors the utilization of a resource.
+
+## Getting Started
+### Prerequisites
+- Python 3.x
+
+### Installation
+1. Clone this repository to your local machine:
+   ```bash
+   git clone <repository-url>
+   cd resource_management_system
